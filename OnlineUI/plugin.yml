@@ -1,0 +1,10 @@
+name: OnlineUI
+version: 1.0.0
+main: Kylan1940\Main
+api: 3.0.0
+author: Kylan1940
+
+commands:
+  online:
+    description: Check who are in the server with FormAPI
+    usage: /online
