@@ -36,19 +36,19 @@ class Main extends PluginBase implements Listener{
 	}
 	public function OnlineUI($player){
 	  $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-    $form = $api->createSimpleForm (function (Player $player, int $data = null) {
+    $form = $api->createSimpleForm function (Player $player, int $data = null) {
         $result = $data;
         if($result === null){
             return true;
 
 			}
-		});
+		};
 		$form->setTitle("§e-=Online §aUI=-");
 		$form->setContent("Players:");
 		foreach($this->getServer()->getOnlinePlayers() as $online){
 			$form->addButton($online->getName(), -1, "", $online->getName(), 0, "textures/ui/confirm");
 		}
-		$form->sendToPlayer($p);
+		$form->sendToPlayer($player);
 		return $form;
 	}
 }
